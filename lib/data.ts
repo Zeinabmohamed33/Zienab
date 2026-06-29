@@ -28,7 +28,7 @@ role: "Front-End Developer | React & Next.js Developer" ,
   email: "zeinabmohamed714@gmail.com",
   availability: true,
   bio: "Crafting elegant solutions through code",
-  resumeUrl: "/projects/cv/zeinab-mohamed-abbas.pdf",
+  resumeUrl: "/projects/cv/Zeinab_Mohamed_Abbas_ Frontend_Developer.pdf",
 
   location: "Egypt",
 };
