@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg: 248 248 251;
+    --surface: 255 255 255;
+    --surface-2: 241 241 246;
+    --line: 226 226 234;
+    --fg: 17 17 24;
+    --muted: 88 88 104;
+    --accent: 79 70 229;
+    --accent-fg: 255 255 255;
+    --radius: 0.75rem;
+    color-scheme: light;
+  }
+
+  .dark {
+    --bg: 9 9 12;
+    --surface: 17 17 22;
+    --surface-2: 26 26 33;
+    --line: 38 38 48;
+    --fg: 242 242 246;
+    --muted: 160 160 176;
+    --accent: 139 132 255;
+    --accent-fg: 12 10 30;
+    color-scheme: dark;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-bg font-sans text-fg antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    @apply bg-accent/25;
+  }
+
+  :focus-visible {
+    @apply outline-none ring-2 ring-accent ring-offset-2 ring-offset-bg;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer utilities {
+  /* Faint grid behind the hero (works in both themes). */
+  .bg-grid {
+    background-size: 44px 44px;
+    background-image:
+      linear-gradient(to right, rgb(var(--fg) / 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgb(var(--fg) / 0.05) 1px, transparent 1px);
+    mask-image: radial-gradient(ellipse at top, black 30%, transparent 75%);
+  }
+}
