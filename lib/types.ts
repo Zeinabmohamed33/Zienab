@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { LucideIcon } from "lucide-react";
 
 export interface PersonalInfo {
@@ -69,13 +70,69 @@ export interface Experience {
   /** Project ids (see projects). */
   projects: string[];
   skills: string[];
+=======
+import { LucideIcon } from "lucide-react";
+
+export interface Skill {
+  name: string;
+  icon: LucideIcon;
+  description: string;
+  technologies: string[];
+}
+
+export type Education = {
+  id: number;
+  title: string;
+  institution: string;
+  period: string;
+  description: string;
+};
+
+export interface Project {
+  title: string;
+  description: string;
+  image: string;
+  technologies: string[];
+  github: string;
+  live: string;
+  category: string;
+}
+
+export interface Experience {
+  id: number;
+  title: string;
+  company: string;
+  location: string;
+  status: string;
+  period: string;
+  description: string[];
+  skills: string[];
+  color: string;
+  link: string;
+>>>>>>> 298ca654d9030827b0be63526300e89e8fdfb8e3
 }
 
 export interface SocialLink {
   name: string;
   url: string;
   icon: LucideIcon;
+<<<<<<< HEAD
   handle: string;
+=======
+  color: string;
+  description: string;
+}
+
+export interface PersonalInfo {
+  name: string;
+  role: string;
+  email: string;
+  availability: boolean;
+  bio: string;
+  resumeUrl: string;
+  location: string;
+  phone?: string;
+>>>>>>> 298ca654d9030827b0be63526300e89e8fdfb8e3
 }
 
 export interface LearningItem {
@@ -83,6 +140,7 @@ export interface LearningItem {
   description: string;
   progress: number;
   startedDate: string;
+<<<<<<< HEAD
   icon: LucideIcon;
 }
 
@@ -92,3 +150,7 @@ export interface Education {
   period: string;
   link?: LinkItem;
 }
+=======
+  icon: any;
+} 
+>>>>>>> 298ca654d9030827b0be63526300e89e8fdfb8e3

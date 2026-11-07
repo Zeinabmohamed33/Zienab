@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { Metadata, Viewport } from "next";
 import { Inter, Plus_Jakarta_Sans } from "next/font/google";
 
@@ -49,6 +50,46 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" suppressHydrationWarning>
       <body className={`${inter.variable} ${display.variable}`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+=======
+import type { Metadata } from "next";
+import { Montserrat } from "next/font/google";
+import { ThemeProvider } from "@/app/providers/theme-provider";
+import "./globals.css";
+
+// Configure Montserrat font
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  variable: "--font-montserrat",
+});
+
+// SEO metadata
+export const metadata: Metadata = {
+  title: "Zeinab Mohamed Abbas | Front-End",
+  description: "Frontend Software Engineer specializing in modern web technologies",
+  keywords: ["Next ", "front-End developer", "react", "typescript"],
+  openGraph: {
+    type: "website",
+    title: "Zeinab Mohamed Abbas | Front-End",
+    description: "Frontend Software Engineer specializing in modern web technologies",
+    images: ["/og-image.png"],
+  },
+};
+
+interface RootLayoutProps {
+  children: React.ReactNode;
+}
+
+export default function RootLayout({ children }: RootLayoutProps) {
+  return (
+    <html lang="en" suppressHydrationWarning>
+      <body className={`${montserrat.variable} antialiased`}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem={false}
+          disableTransitionOnChange
+        >
+>>>>>>> 298ca654d9030827b0be63526300e89e8fdfb8e3
           {children}
         </ThemeProvider>
       </body>
