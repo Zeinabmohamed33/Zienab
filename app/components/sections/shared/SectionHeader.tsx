@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Reveal } from "../../ui/Reveal";
 
 interface SectionHeaderProps {
@@ -14,36 +13,3 @@ export const SectionHeader = ({ eyebrow, title, subtitle }: SectionHeaderProps) 
     {subtitle && <p className="mt-4 text-base leading-relaxed text-muted sm:text-lg">{subtitle}</p>}
   </Reveal>
 );
-=======
-import { motion } from "framer-motion";
-
-interface SectionHeaderProps {
-  title: string;
-  subtitle: string;
-}
-
-export const SectionHeader = ({ title, subtitle }: SectionHeaderProps) => {
-  return (
-    <div className="text-center space-y-6 mb-20">
-      <motion.h2
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5 }}
-        className="text-4xl font-bold text-zinc-100"
-      >
-        {title}
-      </motion.h2>
-      <motion.p
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5, delay: 0.2 }}
-        className="text-zinc-400 max-w-2xl mx-auto text-lg"
-      >
-        {subtitle}
-      </motion.p>
-    </div>
-  );
-}; 
->>>>>>> 298ca654d9030827b0be63526300e89e8fdfb8e3
